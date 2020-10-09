@@ -38,8 +38,6 @@ body {
   left: 0;
   background-color: #ffffff;
   width: 10vw;
-  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
 
 .container .navbar-container h3 {
