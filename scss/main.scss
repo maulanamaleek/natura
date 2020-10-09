@@ -1,0 +1,190 @@
+@import "./resets";
+@import "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  overflow: hidden;
+
+  .navbar-container {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 10vw;
+    box-shadow: $shadow;
+
+    h3 {
+      margin-top: 100px;
+      margin-left: 40px;
+    }
+
+    .theme {
+      margin-top: 200px;
+      margin-left: 45px;
+
+      .themes {
+        display: none;
+      }
+      .active {
+        display: block !important;
+      }
+    }
+
+    ul {
+      margin-top: 150px;
+      margin-left: 45px;
+      font-size: 1.1rem;
+
+      li {
+        margin-bottom: 50px;
+
+        span {
+          display: none;
+          transition: all ease 0.3s;
+        }
+
+        svg {
+          font-size: 1.7rem;
+        }
+
+        &:hover {
+          color: $green;
+          cursor: pointer;
+
+          span {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+
+  .content-container {
+    margin-left: 12vw;
+
+    .home {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+
+      .home-left {
+        h1 {
+          margin-top: 200px;
+          margin-left: 30px;
+          font-size: 3rem;
+        }
+
+        p {
+          margin-left: 30px;
+          max-width: 700px;
+        }
+
+        button {
+          margin-top: 50px;
+          margin-left: 30px;
+          margin-bottom: 10px;
+          display: inline;
+          font-weight: bolder;
+          color: $dark;
+          @include btnLG;
+        }
+
+        #disable {
+          font-size: 0.9rem;
+          opacity: 0.5;
+        }
+
+        .env {
+          margin-top: 100px;
+          margin-left: 30px;
+          display: flex;
+          height: 300px;
+
+          .env-text {
+            margin-left: 10px;
+          }
+
+          .forest-container {
+            margin-right: 50px;
+            @include cardLG;
+            box-shadow: rgba($green, $alpha: 0.3);
+
+            &:hover {
+              background-color: $green;
+              color: white;
+
+              .circle {
+                display: block;
+              }
+            }
+
+            .circle {
+              @include circleLG;
+              display: none;
+              color: $green;
+              text-align: center;
+              position: relative;
+              left: 200px;
+              top: 20px;
+              box-shadow: 1px 1px 10px rgba($green, $alpha: 0.5);
+
+              svg {
+                margin: auto;
+                margin-top: 15px;
+              }
+            }
+
+            h3 {
+              margin-left: 10px;
+              margin-top: 10px;
+            }
+          }
+
+          .sea-container {
+            @include cardLG;
+            box-shadow: 1px 1px 10px rgba($blue, $alpha: 0.3);
+
+            .circle {
+              display: none;
+              @include circleLG;
+              color: $blue;
+              text-align: center;
+              position: relative;
+              left: 200px;
+              top: 20px;
+              box-shadow: 1px 1px 10px rgba($blue, $alpha: 0.5);
+
+              svg {
+                margin: auto;
+                margin-top: 15px;
+              }
+            }
+
+            &:hover {
+              background-color: $blue;
+              color: white;
+              .circle {
+                display: block;
+              }
+            }
+
+            h3 {
+              margin-left: 10px;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+
+      .home-right {
+        img {
+          max-width: 1000px;
+        }
+      }
+    }
+  }
+}

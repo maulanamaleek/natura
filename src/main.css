@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #91d18b;
+  opacity: 0.8;
+}
+
+a:hover {
+  color: #91d18b;
+  opacity: 1;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.container .navbar-container {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 10vw;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .navbar-container h3 {
+  margin-top: 100px;
+  margin-left: 40px;
+}
+
+.container .navbar-container .theme {
+  margin-top: 200px;
+  margin-left: 45px;
+}
+
+.container .navbar-container .theme .themes {
+  display: none;
+}
+
+.container .navbar-container .theme .active {
+  display: block !important;
+}
+
+.container .navbar-container ul {
+  margin-top: 150px;
+  margin-left: 45px;
+  font-size: 1.1rem;
+}
+
+.container .navbar-container ul li {
+  margin-bottom: 50px;
+}
+
+.container .navbar-container ul li span {
+  display: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.container .navbar-container ul li svg {
+  font-size: 1.7rem;
+}
+
+.container .navbar-container ul li:hover {
+  color: #91d18b;
+  cursor: pointer;
+}
+
+.container .navbar-container ul li:hover span {
+  display: inline;
+}
+
+.container .content-container {
+  margin-left: 12vw;
+}
+
+.container .content-container .home {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+}
+
+.container .content-container .home .home-left h1 {
+  margin-top: 200px;
+  margin-left: 30px;
+  font-size: 3rem;
+}
+
+.container .content-container .home .home-left p {
+  margin-left: 30px;
+  max-width: 700px;
+}
+
+.container .content-container .home .home-left button {
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  display: inline;
+  font-weight: bolder;
+  color: #4b4949;
+  padding: 10px 12px;
+  background-color: #91d18b;
+  border: 0;
+  width: 150px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  outline: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.container .content-container .home .home-left button:hover {
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.container .content-container .home .home-left #disable {
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.container .content-container .home .home-left .env {
+  margin-top: 100px;
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 300px;
+}
+
+.container .content-container .home .home-left .env .env-text {
+  margin-left: 10px;
+}
+
+.container .content-container .home .home-left .env .forest-container {
+  margin-right: 50px;
+  padding: 10px 12px;
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  outline: none;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  -webkit-box-shadow: rgba(145, 209, 139, 0.3);
+          box-shadow: rgba(145, 209, 139, 0.3);
+}
+
+.container .content-container .home .home-left .env .forest-container:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.container .content-container .home .home-left .env .forest-container:hover {
+  background-color: #91d18b;
+  color: white;
+}
+
+.container .content-container .home .home-left .env .forest-container:hover .circle {
+  display: block;
+}
+
+.container .content-container .home .home-left .env .forest-container .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: none;
+  color: #91d18b;
+  text-align: center;
+  position: relative;
+  left: 200px;
+  top: 20px;
+  -webkit-box-shadow: 1px 1px 10px rgba(145, 209, 139, 0.5);
+          box-shadow: 1px 1px 10px rgba(145, 209, 139, 0.5);
+}
+
+.container .content-container .home .home-left .env .forest-container .circle:hover {
+  cursor: pointer;
+}
+
+.container .content-container .home .home-left .env .forest-container .circle svg {
+  margin: auto;
+  margin-top: 15px;
+}
+
+.container .content-container .home .home-left .env .forest-container h3 {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.container .content-container .home .home-left .env .sea-container {
+  padding: 10px 12px;
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  outline: none;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  -webkit-box-shadow: 1px 1px 10px rgba(81, 173, 207, 0.3);
+          box-shadow: 1px 1px 10px rgba(81, 173, 207, 0.3);
+}
+
+.container .content-container .home .home-left .env .sea-container:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.container .content-container .home .home-left .env .sea-container .circle {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  color: #51adcf;
+  text-align: center;
+  position: relative;
+  left: 200px;
+  top: 20px;
+  -webkit-box-shadow: 1px 1px 10px rgba(81, 173, 207, 0.5);
+          box-shadow: 1px 1px 10px rgba(81, 173, 207, 0.5);
+}
+
+.container .content-container .home .home-left .env .sea-container .circle:hover {
+  cursor: pointer;
+}
+
+.container .content-container .home .home-left .env .sea-container .circle svg {
+  margin: auto;
+  margin-top: 15px;
+}
+
+.container .content-container .home .home-left .env .sea-container:hover {
+  background-color: #51adcf;
+  color: white;
+}
+
+.container .content-container .home .home-left .env .sea-container:hover .circle {
+  display: block;
+}
+
+.container .content-container .home .home-left .env .sea-container h3 {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.container .content-container .home .home-right img {
+  max-width: 1000px;
+}
+/*# sourceMappingURL=main.css.map */
