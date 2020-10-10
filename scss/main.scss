@@ -9,6 +9,11 @@ body {
 .container {
   overflow: hidden;
 
+  @media screen and (max-width: $mediaSM) {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   .navbar-container {
     height: 100vh;
     position: fixed;
@@ -17,10 +22,24 @@ body {
     background-color: #ffffff;
     width: 10vw;
 
+    @media screen and (max-width: $mediaSM) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 70px;
+      width: 100vw;
+      box-shadow: $shadowlight;
+      z-index: 99;
+    }
+
     img {
       width: 50px;
       margin-top: 100px;
       margin-left: 40px;
+
+      @media screen and (max-width: $mediaSM) {
+        display: none;
+      }
     }
 
     .theme {
@@ -40,8 +59,17 @@ body {
       margin-left: 45px;
       font-size: 1.1rem;
 
+      @media screen and (max-width: $mediaSM) {
+        display: flex;
+
+        justify-content: space-around;
+        width: 100vw;
+        margin: auto;
+        height: 100%;
+      }
+
       li {
-        margin-bottom: 50px;
+        margin: auto;
 
         span {
           display: none;
@@ -68,20 +96,40 @@ body {
     margin-left: 12vw;
     // overflow-y: scroll;
 
+    @media screen and (max-width: $mediaSM) {
+      margin: 0;
+    }
+
     .home {
       display: grid;
       grid-template-columns: 4fr 1fr;
+
+      @media screen and (max-width: $mediaSM) {
+        display: block;
+      }
 
       .home-left {
         h1 {
           margin-top: 200px;
           margin-left: 30px;
           font-size: 3rem;
+
+          @media screen and (max-width: $mediaSM) {
+            margin-top: 100px;
+            margin-left: 20px;
+            font-size: 2rem;
+            max-width: 250px;
+          }
         }
 
         p {
           margin-left: 30px;
           max-width: 700px;
+
+          @media screen and (max-width: $mediaSM) {
+            margin-left: 20px;
+            max-width: 300px;
+          }
         }
 
         button {
@@ -92,6 +140,10 @@ body {
           font-weight: bolder;
           color: $dark;
           @include btnLG;
+
+          @media screen and (max-width: $mediaSM) {
+            margin-left: 20px;
+          }
         }
 
         #disable {
@@ -105,6 +157,12 @@ body {
           display: flex;
           height: 300px;
 
+          @media screen and (max-width: $mediaSM) {
+            flex-direction: column;
+            height: 400px;
+            margin-top: 70px;
+          }
+
           .env-text {
             margin-left: 10px;
           }
@@ -114,6 +172,10 @@ body {
             @include cardLG;
             box-shadow: rgba($green, $alpha: 0.3);
             z-index: 1;
+
+            @media screen and (max-width: $mediaSM) {
+              margin-bottom: 50px;
+            }
 
             &:hover {
               background-color: $green;
@@ -213,8 +275,18 @@ body {
       }
 
       .home-right {
+        @media screen and (max-width: $mediaSM) {
+          height: 0;
+        }
         img {
           max-width: 1000px;
+
+          @media screen and (max-width: $mediaSM) {
+            position: relative;
+            z-index: -1;
+            top: -900px;
+            max-width: 800px;
+          }
         }
       }
     }
@@ -223,6 +295,11 @@ body {
       margin-top: 130px;
       display: grid;
       grid-template-columns: 1fr 1.3fr;
+
+      @media screen and (max-width: $mediaSM) {
+        grid-template-columns: 1fr;
+        margin-top: 70px;
+      }
 
       .about-image {
         margin-left: auto;
@@ -233,6 +310,16 @@ body {
         width: 400px;
         height: 500px;
         transition: all ease 0.5s;
+
+        @media screen and (max-width: $mediaSM) {
+          width: 100vw;
+          margin: 0;
+          border-radius: 0;
+
+          &:hover {
+            transform: none;
+          }
+        }
 
         &:hover {
           transform: translateY(-7px);
@@ -250,9 +337,19 @@ body {
         margin-right: 300px;
         text-align: right;
 
+        @media screen and (max-width: $mediaSM) {
+          margin: auto;
+          text-align: center;
+        }
+
         h1 {
           font-size: 3rem;
           margin-bottom: 10px;
+
+          @media screen and (max-width: $mediaSM) {
+            font-size: 2rem;
+            margin-top: 30px;
+          }
         }
       }
     }
@@ -262,11 +359,20 @@ body {
       margin-bottom: 200px;
       margin-top: 100px;
 
+      @media screen and (max-width: $mediaSM) {
+        margin-bottom: 70px;
+        height: max-content;
+      }
+
       p {
         text-align: center;
         font-size: 2.5rem;
         margin-bottom: 50px;
         font-weight: 600;
+
+        @media screen and (max-width: $mediaSM) {
+          font-size: 2rem;
+        }
       }
 
       .client-logo {
@@ -275,9 +381,20 @@ body {
         margin-right: auto;
         margin-left: auto;
 
+        @media screen and (max-width: $mediaSM) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          width: 100vw;
+          row-gap: 30px;
+        }
+
         img {
           height: 50px;
           filter: grayscale(100%);
+
+          @media screen and (max-width: $mediaSM) {
+            margin: auto;
+          }
 
           &:hover {
             filter: grayscale(30%);
@@ -292,12 +409,20 @@ body {
       overflow: hidden;
       height: 800px;
 
+      @media screen and (max-width: $mediaSM) {
+        height: 200px;
+      }
+
       p {
         z-index: 1;
         color: white;
         text-align: center;
         font-size: 2rem;
         font-weight: 600;
+
+        @media screen and (max-width: $mediaSM) {
+          font-size: 0.8rem;
+        }
       }
 
       h2 {
@@ -310,13 +435,24 @@ body {
         margin-right: auto;
         margin-top: 230px;
         z-index: 2;
+
+        @media screen and (max-width: $mediaSM) {
+          font-size: 1rem;
+          max-width: 300px;
+          margin-top: 40px;
+        }
       }
 
       img {
         width: 100%;
         z-index: -1;
         position: relative;
-        top: -900px;
+        top: -1000px;
+
+        @media screen and (max-width: $mediaSM) {
+          top: -700px;
+          width: 1000px;
+        }
       }
     }
   }
@@ -333,6 +469,10 @@ body {
         width: 700px;
         display: block;
         @include inputLG;
+
+        @media screen and (max-width: $mediaSM) {
+          width: 300px;
+        }
       }
 
       button {
