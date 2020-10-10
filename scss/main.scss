@@ -163,7 +163,7 @@ body {
           @media screen and (max-width: $mediaSM) {
             flex-direction: column;
             height: 400px;
-            margin-top: 70px;
+            margin-top: 120px;
           }
 
           .env-text {
@@ -318,6 +318,7 @@ body {
           width: 100vw;
           margin: 0;
           border-radius: 0;
+          box-shadow: none;
 
           &:hover {
             transform: none;
@@ -333,6 +334,10 @@ body {
           top: -350px;
           width: 1200px;
           left: -120px;
+
+          @media screen and (max-width: $mediaSM) {
+            top: -450px;
+          }
         }
       }
 
