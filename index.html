@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Natura | Save Our Planet</title>
     <link rel="stylesheet" href="./src/main.css" />
+    <link rel="shortcut icon" href="./natura.png" type="image/x-icon">
   </head>
   <body>
     <div class="container">
+
+      <!-- Navbar -->
       <div class="navbar-container">
-        <h3>Natura</h3>
+        <img src="./natura.png" alt="natura">
         <ul>
           <li><a href="#home"><i class="fas fa-home"></i> <span>Home</span></a></li>
-          <li><a href="#"><i class="fas fa-user-alt"></i> <span>About</span></a></li>
-          <li><a href="#"><i class="fas fa-photo-video"></i> <span>Gallery</span></a></li>
-          <li><a href="#"><i class="fas fa-phone"></i> <span>Contact</span></a></li>
+          <li><a href="#about"><i class="fas fa-user-alt"></i> <span>About</span></a></li>
+          <li><a href="#gallery"><i class="fas fa-photo-video"></i> <span>Gallery</span></a></li>
+          <li><a href="#contact"><i class="fas fa-phone"></i> <span>Contact</span></a></li>
           <li><a href="https://www.github.com/maulanamaleek" target="blank"><i class="fab fa-github"></i> <span>My Github</span></a></li>
         </ul>
 
@@ -24,23 +27,29 @@
         </div> -->
       </div>
 
-      <div class="content-container" id="home">
 
-        <div class="home">
+      <!-- Content Home -->
+
+      <div class="content-container" id="content">
+
+        <div class="home" id="home">
           <div class="home-left">
             <h1>Protect Our Environment!</h1>
             <p>Global warming issue have great impact to our nature. The fulfillment of CO2 gas in the atmosphere can result in changes in global temperature and meteorological and geological conditions. Increasing the the sea level and affect many lifes.</p>
             <button>Donate Now</button>
             <p id="disable">Your donation help the restoration of forest and sea</p>
 
-            <div class="env">
+            <div class="env rellax" data-rellax-speed="1">
               <div class="forest-container">
+                <img src="./src/img/plants.png" alt="plants">
                 <h3>Protect Forest!</h3>
                 <p class="env-text">Save habitats of trillion lifes in forest. Replant over 100.000 trees.</p>
                 <div class="circle"><i class="fas fa-chevron-right"></i></div>
               
               </div>
+
               <div class="sea-container">
+                <img src="./src/img/sea.png" alt="sea">
                 <h3>Protect Sea!</h3>
                 <p class="env-text">Save habitats of trillion lifes in sea. Remove plastic and oil from water.</p>
                 <div class="circle"><i class="fas fa-chevron-right"></i></div>
@@ -50,11 +59,75 @@
           </div>
 
           <div class="home-right">
-            <img src="./src/img/home.png" alt="tree">
+            <img class="rellax" data-rellax-speed="-3" src="./src/img/home.png" alt="tree">
           </div>
           
+       
+        </div>
+
+        <div class="about" id="about">
+          <div class="about-image">
+            <img class="rellax" data-rellax-speed="-3" src="./src/img/about.png" alt="about">
+          </div>
+          <div class="about-content">
+            <h1>About</h1>
+            <p>Natura is <b> Environment</b> agent established since 2020. Our company work on mantaining good environment for every living creatures.
+            The purpose of Natura is to make earth as a comfortable place for everyone. Our company has been working with several
+            industries.
+            </p>
+            <br>
+
+            <p style="color: #91d18b;">Fight the Global Warming with Us!</p>
+          </div>
+        </div>
+
+        <div class="client">
+          <p class="client-text">Our Client</p>
+          <div class="client-logo">
+            <img src="./src/img/forest-fire.svg" alt="forest">
+            <img src="./src/img/jellyfish.svg" alt="jelly">
+            <img src="./src/img/tiger.svg" alt="tiger">
+            <img src="./src/img/whale.svg" alt="whale">
+          </div>
+
+        </div>
+       
+
+        <div class="gallery-container" id="gallery">
+          <div class="gallery" >
+            <h2>"Destroying rainforest for economic gain is like burning a Renaissance painting to cook a meal."</h2>
+            <p>E. O. Wilson</p>
+            <img class="rellax" data-rellax-speed="-3" src="./src/img/swamp2.png" alt="jungle">
+          </div>
+  
+          <div class="gallery">
+            <h2>"Pollution from oil and gas development, toxic runoff, and miles and miles of plastic trash foul the waters and threaten marine life."</h2>
+            <p>Frances Beinecke</p>
+            <img class="rellax" data-rellax-speed="-2" src="./src/img/deep.png" alt="jungle">
+          </div>
+        </div>
+
+
+        <div class="contact" id="contact">
+          <h1 style="text-align: center;">Contact Us</h1>
+          <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <br>
+            <button type="submit">Submit</button>
+          </form>
         </div>
         
+        <footer>
+          <hr>
+          <p>&copy;2020 Maulana Malik Yusuf</p>
+          <br>
+          <p>Illustration by</p>
+          <h4>Undraw.co  |  Freepik  |  Vecteezy</h4>
+          <p>Icons by</p>
+          <h4>Fontawesome  |  Flaticon  </h4>
+        </footer>
+
       </div>
     </div>
 
@@ -62,5 +135,13 @@
       src="https://kit.fontawesome.com/04b6c6740d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js" crossorigin="anonymous"></script>
+    <script>
+      //default JS Setting
+      var rellax = new Rellax('.rellax', {
+        breakpoints:[576, 768, 1201]
+      });
+    </script>
+ 
   </body>
 </html>

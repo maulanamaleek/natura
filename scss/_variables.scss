@@ -2,6 +2,7 @@ $green: #91d18b;
 $blue: #51adcf;
 $dark: rgb(75, 73, 73);
 $shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+$shadowlight: 1px 1px 5px rgba(0, 0, 0, 0.1);
 
 @mixin btnLG {
   padding: 10px 12px;
@@ -44,4 +45,32 @@ $shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
   &:hover {
     cursor: pointer;
   }
+}
+
+@mixin inputLG {
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  width: 600px;
+  // height: 70px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: $shadowlight;
+
+  &:focus {
+    background-color: $blue;
+    color: white;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+
+@mixin flexSVG {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

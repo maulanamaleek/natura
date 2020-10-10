@@ -2,6 +2,7 @@
 * {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -40,7 +41,8 @@ body {
   width: 10vw;
 }
 
-.container .navbar-container h3 {
+.container .navbar-container img {
+  width: 50px;
   margin-top: 100px;
   margin-left: 40px;
 }
@@ -141,7 +143,7 @@ body {
 }
 
 .container .content-container .home .home-left .env {
-  margin-top: 100px;
+  margin-top: 130px;
   margin-left: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,6 +169,7 @@ body {
   transition: all ease 0.5s;
   -webkit-box-shadow: rgba(145, 209, 139, 0.3);
           box-shadow: rgba(145, 209, 139, 0.3);
+  z-index: 1;
 }
 
 .container .content-container .home .home-left .env .forest-container:hover {
@@ -181,6 +184,22 @@ body {
 
 .container .content-container .home .home-left .env .forest-container:hover .circle {
   display: block;
+}
+
+.container .content-container .home .home-left .env .forest-container:hover img {
+  display: block;
+  z-index: -1;
+}
+
+.container .content-container .home .home-left .env .forest-container img {
+  display: none;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  position: absolute;
+  width: 350px;
+  top: -100px;
+  left: -35px;
+  z-index: -1;
 }
 
 .container .content-container .home .home-left .env .forest-container .circle {
@@ -232,6 +251,17 @@ body {
           transform: translateY(-7px);
 }
 
+.container .content-container .home .home-left .env .sea-container img {
+  display: none;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  position: absolute;
+  width: 350px;
+  top: -100px;
+  left: -35px;
+  z-index: -1;
+}
+
 .container .content-container .home .home-left .env .sea-container .circle {
   display: none;
   width: 50px;
@@ -265,6 +295,11 @@ body {
   display: block;
 }
 
+.container .content-container .home .home-left .env .sea-container:hover img {
+  display: block;
+  z-index: -1;
+}
+
 .container .content-container .home .home-left .env .sea-container h3 {
   margin-left: 10px;
   margin-top: 10px;
@@ -272,5 +307,210 @@ body {
 
 .container .content-container .home .home-right img {
   max-width: 1000px;
+}
+
+.container .content-container .about {
+  margin-top: 130px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr 1.3fr;
+}
+
+.container .content-container .about .about-image {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 30px;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+  height: 500px;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.container .content-container .about .about-image:hover {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.container .content-container .about .about-image img {
+  position: relative;
+  top: -350px;
+  width: 1200px;
+  left: -120px;
+}
+
+.container .content-container .about .about-content {
+  margin-right: 300px;
+  text-align: right;
+}
+
+.container .content-container .about .about-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.container .content-container .client {
+  width: 100%;
+  margin-bottom: 200px;
+  margin-top: 100px;
+}
+
+.container .content-container .client p {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.container .content-container .client .client-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container .content-container .client .client-logo img {
+  height: 50px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.container .content-container .client .client-logo img:hover {
+  -webkit-filter: grayscale(30%);
+          filter: grayscale(30%);
+}
+
+.container .content-container .gallery {
+  margin-left: 0 !important;
+  width: 100%;
+  overflow: hidden;
+  height: 800px;
+}
+
+.container .content-container .gallery p {
+  z-index: 1;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.container .content-container .gallery h2 {
+  text-align: center;
+  color: white;
+  max-width: 1000px;
+  display: block;
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 230px;
+  z-index: 2;
+}
+
+.container .content-container .gallery img {
+  width: 100%;
+  z-index: -1;
+  position: relative;
+  top: -900px;
+}
+
+.container .contact {
+  margin-top: 200px;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.container .contact form {
+  margin-top: 50px;
+}
+
+.container .contact form input {
+  width: 700px;
+  display: block;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  width: 600px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container .contact form input:focus {
+  background-color: #51adcf;
+  color: white;
+}
+
+.container .contact form input:focus::-webkit-input-placeholder {
+  color: white;
+}
+
+.container .contact form input:focus:-ms-input-placeholder {
+  color: white;
+}
+
+.container .contact form input:focus::-ms-input-placeholder {
+  color: white;
+}
+
+.container .contact form input:focus::placeholder {
+  color: white;
+}
+
+.container .contact form button {
+  padding: 10px 12px;
+  background-color: #91d18b;
+  border: 0;
+  width: 150px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  outline: none;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #51adcf;
+  color: white;
+}
+
+.container .contact form button:hover {
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.container footer {
+  text-align: center;
+  margin-top: 200px;
+  width: 100%;
+  height: 400px;
+}
+
+.container footer hr {
+  width: 60%;
+  margin: auto;
+}
+
+.container footer p {
+  margin-top: 50px;
 }
 /*# sourceMappingURL=main.css.map */
