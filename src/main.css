@@ -106,7 +106,13 @@ body {
 }
 
 .container .navbar-container ul li {
-  margin: auto;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 390px) {
+  .container .navbar-container ul li {
+    margin: auto;
+  }
 }
 
 .container .navbar-container ul li span {
